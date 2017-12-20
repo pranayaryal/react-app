@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Content from './Content.js';
 
 class Heading extends Component {
 
@@ -11,8 +10,10 @@ class Heading extends Component {
     render(props) {
                 return (
                     <div>
-                        <div className="App">
-                            <h1 onClick={ this.handleClick } >{ this.props.heading }</h1>
+                        <div>
+                            <h1>
+                                <a href="#" onClick={ this.handleClick }>{ this.props.heading }</a>
+                            </h1>
                         </div>
                     </div>
 
@@ -20,7 +21,7 @@ class Heading extends Component {
 
     }
 
-    handleClick(props){
+    handleClick(){
         this.props.toggleContent() ;
     }
 
